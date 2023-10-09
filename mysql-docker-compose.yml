@@ -3,9 +3,9 @@ services:
     nopcommerce_web:
         build: .
         container_name: nopcommerce
-        volumes:
+      #  volumes:
       # - db_data:/var/lib/mysql
-          - ./data/app:/app
+      #    - ./data/app:/app
         ports:
             - "80:80"
         depends_on:
