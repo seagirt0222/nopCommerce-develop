@@ -3,9 +3,6 @@ services:
     nopcommerce_web:
         build: .
         container_name: nopcommerce
-      #  volumes:
-      # - db_data:/var/lib/mysql
-      #    - ./data/app:/app
         ports:
             - "80:80"
         depends_on:
@@ -13,7 +10,6 @@ services:
     nopcommerce_database:
         image: "mysql:latest"     
         volumes:
-      # - db_data:/var/lib/mysql
           - ./data/db_data:/var/lib/mysql
         container_name: nopcommerce_mysql_server
         command: "--default-authentication-plugin=mysql_native_password"
