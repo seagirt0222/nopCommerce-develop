@@ -11,6 +11,8 @@ services:
             - nopcommerce_database
     nopcommerce_database:
         image: "mysql:latest"     
+        ports:
+            - "3306:3306"
         volumes:
           - ./data/db_data:/var/lib/mysql
         container_name: nopcommerce_mysql_server
