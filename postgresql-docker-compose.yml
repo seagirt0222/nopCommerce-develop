@@ -9,9 +9,8 @@ services:
             - nopcommerce_database
     nopcommerce_database:
         image: "postgres:latest"
-                volumes:
-      # - db_data:/var/lib/mysql
-          - ./data/db_data:/var/lib/mysql
+        volumes:
+            - ./data/db_data:/var/lib/postgresql/data
         container_name: nopcommerce_postgres_server
         restart: "always"
         environment:
