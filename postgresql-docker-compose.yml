@@ -5,6 +5,8 @@ services:
         container_name: nopcommerce
         ports:
             - "80:80"
+        volumes:
+            - ./app/app
         depends_on:
             - nopcommerce_database
     nopcommerce_database:
